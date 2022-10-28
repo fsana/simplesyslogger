@@ -38,6 +38,7 @@ func main() {
 	// read the values for address and port from command line parameters
 	flag.StringVar(&cfg.address, "address", "", "Listening address")
 	flag.IntVar(&cfg.port, "port", 20080, "Listening port")
+	flag.Parse()
 
 	//form the address
 	address := fmt.Sprintf("%s:%d", cfg.address, cfg.port)
